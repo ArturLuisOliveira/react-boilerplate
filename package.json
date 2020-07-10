@@ -1,0 +1,43 @@
+{
+    "name": "react-boilerplate",
+    "version": "1.0.0",
+    "description": "Simple react boilerplate.",
+    "main": "index.js",
+    "author": "ArturLuisOliveira",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack-dev-server --open --mode development",
+        "build": "webpack --mode production",
+        "lint": "eslint --ext .js --ext .jsx src",
+        "lint:fix": "eslint --fix --ext .js --ext .jsx src",
+        "prettier": "prettier --check \"./**/*\"",
+        "prettier:fix": "prettier --write \"./**/*\"",
+        "test:unit": "node node_modules/jest/bin/jest.js",
+        "test:unit:file": "node node_modules/jest/bin/jest.js -i ",
+        "test:e2e": "cucumber-js  --fail-fast --exit --retry 3 -- --require \"test/e2e\" ",
+        "test:e2e:scenario": " node node_modules/cucumber/bin/cucumber-js "
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "@babel/preset-react": "^7.10.4",
+        "babel-loader": "^8.1.0",
+        "chai": "^4.2.0",
+        "cucumber": "^6.0.5",
+        "eslint": "^7.4.0",
+        "eslint-plugin-react": "^7.20.3",
+        "html-loader": "^1.1.0",
+        "html-webpack-plugin": "^4.3.0",
+        "jest": "^26.1.0",
+        "prettier": "^2.0.5",
+        "puppeteer": "^5.0.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "antd": "^4.4.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    }
+}
