@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const theme = require('./theme');
 
 module.exports = {
     entry: './src/index.js',
@@ -27,6 +28,28 @@ module.exports = {
                 use: [
                     {
                         loader: 'html-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.(less|css)$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            lessOptions: {
+                                modifyVars: {
+                                    ...theme
+                                },
+                                javascriptEnabled: true
+                            }
+                        }
                     }
                 ]
             }

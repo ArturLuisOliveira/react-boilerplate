@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Typography } from 'antd';
+
+import './styles.less';
 
 function App() {
     return (
         <>
-            <h1>React Boilerplate</h1>
+            <Typography className="blue">React Boilerplate</Typography>
         </>
     );
 }
